@@ -1,0 +1,262 @@
+html {
+    font-family: "JetBrains Mono";
+    background-color: #f3f3f3;
+    margin: 2rem 2rem 2rem 3rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    max-width: 825px;
+    margin: auto;
+    border: solid black;
+}
+
+h5 {
+    margin: auto;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-decoration: underline;
+    font-size: 0.8rem;
+}
+
+.top1 {
+    padding-top: 2rem;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.top2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.top2 > .left,
+.top2 > .right {
+    flex: 0 0 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.lang button {
+    background-color: #fbfbfb;
+    border-radius: 4px;
+    width: 55px;
+}
+
+.lang button.active {
+    background-color: #bbbbbb;
+}
+
+.lang button:hover {
+    cursor: pointer;
+    background-color: #bbbbbb;
+}
+
+.icons {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    padding-top: 5px;
+}
+
+.icon.item {
+    margin-right: 10px;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    position: relative;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 110%;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.link:hover .tooltip {
+    display: block;
+}
+
+.portrait {
+    width: 200px;
+    padding: 0.4rem;
+    margin-right: 10rem;
+    background-color: #fbfbfb;
+}
+
+.top1 > .right {
+    text-align: center;
+}
+.right > .name {
+    margin-bottom: 0.5rem;
+}
+
+.right > h4,
+.right > ul {
+    margin: 0;
+}
+
+.top2 > .right,
+.top2 > .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mid > .title,
+.bottom > .title,
+.left > .title,
+.right > .title {
+    background-color: black;
+    padding: 0.5rem 1rem;
+    max-width: 825px;
+    color: #fbfbfb;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.right > .title,
+.left > .title {
+    margin-bottom: 0.8rem;
+    width: 85%;
+}
+
+.left > p {
+    text-align: justify;
+    margin-top: 0;
+    width: 80%;
+}
+
+.content {
+    text-align: justify;
+    width: 80%;
+}
+
+.bottom > .content,
+.content > ul {
+    margin-left: 3rem;
+}
+
+.info,
+.interest.title {
+    margin-bottom: 0.8rem;
+}
+
+.skills.row1 {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.skills.row2 {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.skills.item {
+    padding-bottom: 1rem;
+}
+
+.skills.item > h2,
+.skills.row2 > div > h2 {
+    margin-bottom: 0.4rem;
+    margin-top: 0;
+}
+
+.skills.row2 > div > li {
+    margin-left: 1.6rem;
+}
+
+.info.title,
+.interest.title {
+    font-weight: 900;
+}
+
+.interests.content {
+    width: 87%;
+    padding-bottom: 2rem;
+}
+
+p {
+    margin: 0;
+}
+.interests.title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: auto;
+    color: black;
+    background-color: #fbfbfb;
+    border: 1px solid black;
+    border-radius: 0.4rem;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.interests.title:hover {
+    background-color: #bbbbbb;
+    cursor: pointer;
+}
+
+.inactive {
+    display: none;
+}
+@media (max-width: 944px) {
+    .top1,
+    .top2 {
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+    }
+    html,
+    body,
+    main {
+        margin: 0;
+    }
+
+    main {
+        border: none;
+        border-radius: 0;
+    }
+
+    .portrait {
+        margin-right: 0;
+    }
+    .skills.row1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .skills.row2 {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr fit-content(20%);
+        justify-content: space-around;
+    }
+}

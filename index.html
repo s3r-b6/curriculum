@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Currículum vitae</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=JetBrains Mono"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./styles.css" />
+        <script>
+            window.onload = () => {
+                document
+                    .querySelector(".interests.title")
+                    .addEventListener("click", () => toggleInterests());
+
+                document
+                    .querySelector(".lang.esp")
+                    .addEventListener("click", () => langSwitch(false));
+
+                document
+                    .querySelector(".lang.eng")
+                    .addEventListener("click", () => langSwitch(true));
+            };
+
+            function toggleInterests() {
+                let interestsContent =
+                    document.querySelector(".interests.content");
+                interestsContent.classList.toggle("inactive");
+                if (!interestsContent.classList.contains("inactive")) {
+                    document.querySelector(".interests.title").scrollIntoView();
+                }
+            }
+
+            function langSwitch(english) {
+                const main = document.querySelector("main");
+                if (english && !main.classList.contains("eng")) {
+                    switchButtonsState();
+                    main.classList.toggle("eng");
+                } else if (!english && main.classList.contains("eng")) {
+                    switchButtonsState();
+                    main.classList.toggle("eng");
+                } else {
+                    return;
+                }
+
+                function switchButtonsState() {
+                    document
+                        .querySelector(".lang.eng")
+                        .classList.toggle("active");
+
+                    document
+                        .querySelector(".lang.esp")
+                        .classList.toggle("active");
+                }
+            }
+        </script>
+    </head>
+
+    <body>
+        <!--TODO: make spanish default-->
+        <main class="eng">
+            <div class="top1">
+                <!--Placeholder-->
+                <div class="left">
+                    <img class="portrait" src="./img/no-image.jpg" />
+                </div>
+                <div class="right">
+                    <div class="lang buttons">
+                        <button class="lang esp">ESP</button>
+                        <button class="lang eng active">ENG</button>
+                    </div>
+                    <h2 class="name">Sergio Bermejo</h2>
+                    <h4>Software Developer</h4>
+                    <ul class="icons">
+                        <li class="icon item">
+                            <a
+                                class="link"
+                                href="https://github.com/s3r-b6"
+                                title="Github"
+                            >
+                                <img
+                                    class="logo"
+                                    id="github"
+                                    src="./img/github.png"
+                                    alt="GitHub logo"
+                                />
+                                <span class="tooltip">Github</span>
+                            </a>
+                        </li>
+                        <li class="icon item">
+                            <a
+                                class="link"
+                                href="https://www.codewars.com/users/s3r-b6"
+                                title="Codewars"
+                            >
+                                <img
+                                    class="logo"
+                                    id="codewars"
+                                    src="./img/codewars.jpg"
+                                    alt="Codewars logo"
+                                />
+                                <span class="tooltip">Codewars</span>
+                            </a>
+                        </li>
+                        <li class="icon item">
+                            <!--TODO:-->
+                            <a class="link" href="" title="LinkedIn">
+                                <img
+                                    class="logo"
+                                    id="linkedin"
+                                    src="./img/linkedin.png"
+                                    alt="LinkedIn logo"
+                                />
+                                <span class="tooltip">LinkedIn</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Personal Information Section -->
+            <div class="top2">
+                <div class="left">
+                    <h2 class="title">About me</h2>
+                    <p>
+                        I am a software developer with a passion for data
+                        structures and algorithms. I have experience developing
+                        applications using Java, JavaScript and MySQL and
+                        MariaDB and I'm currently learning Rust. I also have
+                        experience with HTML and CSS and some React, but my main
+                        interest is back-end.
+                        <br />
+                        <br />
+                        I am seeking internship opportunities to enhance my
+                        skills and to gain practical exposure in the industry. I
+                        am highly motivated, eager to learn and ready to take on
+                        new challenges.
+                    </p>
+                </div>
+                <div class="right">
+                    <h2 class="title">Personal Information</h2>
+                    <div class="content">
+                        <div class="info">
+                            <span class="info title">💳 Full Name:</span>
+                            <br />
+                            <span class="info details"
+                                >Sergio Bermejo de las Heras</span
+                            >
+                        </div>
+                        <div class="info">
+                            <span class="info title">🎂 Date of Birth:</span>
+                            <br />
+                            <span class="info details">28/11/2000</span>
+                        </div>
+                        <div class="info">
+                            <span class="info title">📫 Address:</span>
+                            <br />
+                            <span class="info details"
+                                >Ronda Castilla Oeste nº 39, 28991, Torrejón de
+                                la Calzada</span
+                            >
+                        </div>
+                        <div class="info">
+                            <span class="info title">📧 Email:</span>
+                            <br />
+                            <span class="info details"
+                                >sergio.bermejo123@gmail.com</span
+                            >
+                        </div>
+                        <div class="info">
+                            <span class="info title">📞 Phone:</span>
+                            <br />
+                            <span class="info details">+34 684 01 13 35</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Section -->
+            <div class="mid">
+                <h2 class="title">Professional Skills</h2>
+                <div class="skills content">
+                    <ul>
+                        <div class="skills row1">
+                            <li class="skills item">
+                                <h2>Programming languages</h2>
+                                <ul class="skills list">
+                                    <li>Java</li>
+                                    <li>Currently learning Rust</li>
+                                    <li>JavaScript & TypeScript</li>
+                                </ul>
+                            </li>
+                            <li class="skills item">
+                                <h2>Frameworks</h2>
+                                <ul class="skills list">
+                                    <li>Spring Boot</li>
+                                    <li>React</li>
+                                    <li>JUnit</li>
+                                </ul>
+                            </li>
+                        </div>
+                        <li class="skills item">
+                            <h2>Tools</h2>
+                            <ul class="skills row2">
+                                <div>
+                                    <h2>Systems</h2>
+                                    <li>Linux</li>
+                                    <li>Windows</li>
+                                </div>
+                                <div>
+                                    <h2>Version control</h2>
+                                    <li>Git</li>
+                                </div>
+                                <div>
+                                    <h2>Editors</h2>
+                                    <li>Neovim</li>
+                                    <li>IntelliJ</li>
+                                    <li>VS Code</li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="bottom">
+                <h2 class="title">Education</h2>
+                <div class="content">
+                    <div class="education">
+                        <div class="info">
+                            <span class="info title">Degree:</span>
+                            <br />
+                            <span class="info details">
+                                Professional Training in Software Development
+                                <br />
+                                Desarrollo de Aplicaciones Multiplataforma (DAM)
+                            </span>
+                        </div>
+                        <div class="info">
+                            <span class="info title">Institution:</span>
+                            <br />
+                            <span class="info details"
+                                >iFP Centro de Formación Profesional</span
+                            >
+                        </div>
+                        <div class="info">
+                            <span class="info title">Date:</span>
+                            <span class="info details">2022-2023</span>
+                        </div>
+                    </div>
+                    <div class="education">
+                        <div class="info">
+                            <span class="info title">Degree:</span>
+                            <br />
+                            <span class="info details">
+                                Degree in Musicology
+                            </span>
+                        </div>
+                        <div class="info">
+                            <span class="info title">Institution:</span>
+                            <br />
+                            <span class="info details"
+                                >Universidad Complutense de Madrid</span
+                            >
+                        </div>
+                        <div class="info">
+                            <span class="info title">Date:</span>
+                            <span class="info details">2018-2021</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Interests Section -->
+                <h2 class="interests title">More about me</h2>
+                <div class="interests content inactive">
+                    <h3 class="interest title">Gaming and computers:</h3>
+                    <p>
+                        My love for computers stems from my gaming experience. I
+                        grew up playing on the PS2 and then switched to a laptop
+                        that my parents gave me. Since it was not powerful
+                        enough for gaming, I had to tweak and modify the
+                        settings constantly. This sparked my interest in
+                        hardware and computers. I spend time watching YouTube
+                        videos on PC hardware and buying parts when I can afford
+                        them.
+                    </p>
+                    <h3 class="interest title">Development</h3>
+                    <p>
+                        I also spend time watching videos and streams about
+                        coding (such as ThePrimeagen). I spend a lot of time
+                        playing around in my PC. I sometimes enjoy doing coding
+                        challenges (Codewars, Advent Of Code). I also like
+                        trying things I hear from people I respect.
+                        <br />
+                        Right now, I am learning Rust and have been tinkering
+                        with it. I have tried Bevy, for game development, Rocket
+                        for easily making a REST API, and some Tokio.
+                    </p>
+                    <h3 class="interest title">Music:</h3>
+                    <p>
+                        I have been playing electric guitar for 11 years,
+                        focusing on jazz and progressive rock/metal genres. This
+                        has taught me discipline and hard work. I have also
+                        improved my English skills by watching online classes
+                        from famous guitar players. This has enabled me to learn
+                        about various topics online.
+                    </p>
+                    <h3 class="interest title">Literature</h3>
+                    <p>
+                        I enjoy reading since I was little. My favorite genres
+                        are fantasy and science fiction (Brandon Sanderson, Liu
+                        Cixin), but I also like reading about history and
+                        philosophy.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
