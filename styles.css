@@ -197,6 +197,10 @@ h5 {
     font-weight: 900;
 }
 
+.education.item:not(.education.item:last-child) {
+    border-bottom: 1px solid black;
+}
+
 .interests.content {
     width: 87%;
     padding-bottom: 2rem;
