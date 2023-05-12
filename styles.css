@@ -7,11 +7,11 @@ html {
 main {
     display: flex;
     flex-direction: column;
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 1rem;
     max-width: 825px;
     margin: auto;
-    border: solid black;
+    border: solid #000;
 }
 
 h5 {
@@ -35,9 +35,14 @@ h5 {
     flex-direction: row;
 }
 
-.top2 > .left,
+.top2 > .left {
+    flex: 0 0 57%;
+    height: 100%;
+    width: 100%;
+}
+
 .top2 > .right {
-    flex: 0 0 50%;
+    flex: 0 0 43%;
     height: 100%;
     width: 100%;
 }
@@ -49,12 +54,12 @@ h5 {
 }
 
 .lang button.active {
-    background-color: #bbbbbb;
+    background-color: #bbb;
 }
 
 .lang button:hover {
     cursor: pointer;
-    background-color: #bbbbbb;
+    background-color: #bbb;
 }
 
 .icons {
@@ -90,8 +95,8 @@ h5 {
     display: none;
     position: absolute;
     top: 110%;
-    background-color: black;
-    color: white;
+    background-color: #000;
+    color: #fff;
     padding: 5px;
     border-radius: 5px;
     font-size: 12px;
@@ -112,6 +117,7 @@ h5 {
 .top1 > .right {
     text-align: center;
 }
+
 .right > .name {
     margin-bottom: 0.5rem;
 }
@@ -132,7 +138,7 @@ h5 {
 .bottom > .title,
 .left > .title,
 .right > .title {
-    background-color: black;
+    background-color: #000;
     padding: 0.5rem 1rem;
     max-width: 825px;
     color: #fbfbfb;
@@ -149,12 +155,12 @@ h5 {
 .left > p {
     text-align: justify;
     margin-top: 0;
-    width: 80%;
+    width: 85%;
 }
 
 .content {
     text-align: justify;
-    width: 80%;
+    width: 85%;
 }
 
 .bottom > .content,
@@ -178,6 +184,7 @@ h5 {
     display: inline-flex;
     justify-content: space-between;
 }
+
 .skills.item {
     padding-bottom: 1rem;
 }
@@ -198,7 +205,7 @@ h5 {
 }
 
 .education.item:not(.education.item:last-child) {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000;
 }
 
 .interests.content {
@@ -209,26 +216,35 @@ h5 {
 p {
     margin: 0;
 }
+
 .interests.title {
     margin-top: 2rem;
     margin-bottom: 2rem;
     width: auto;
-    color: black;
+    color: #000;
     background-color: #fbfbfb;
-    border: 1px solid black;
+    border: 1px solid #000;
     border-radius: 0.4rem;
     text-decoration: underline;
     text-align: center;
 }
 
 .interests.title:hover {
-    background-color: #bbbbbb;
+    background-color: #bbb;
     cursor: pointer;
 }
 
 .inactive {
     display: none;
 }
+
+footer {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
 @media (max-width: 944px) {
     .top1,
     .top2 {
@@ -237,6 +253,7 @@ p {
         align-items: center;
         justify-content: center;
     }
+
     html,
     body,
     main {
@@ -251,6 +268,7 @@ p {
     .portrait {
         margin-right: 0;
     }
+
     .skills.row1 {
         display: flex;
         flex-direction: column;
