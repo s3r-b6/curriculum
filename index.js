@@ -35,22 +35,24 @@ function langSwitch(english) {
         //About me
         document.querySelector("#titleAbout").textContent = "About me";
         document.querySelector("#aboutMe").innerHTML = `
-            I am a software developer with a passion for data
-            structures and algorithms. I have experience developing
-            applications using Java, JavaScript and MySQL and
-            MariaDB and I'm currently learning Rust. I also have
-            experience with HTML and CSS and some React, but my main
-            interest is back-end.
-            <br /> <br />
-            I am seeking internship opportunities to enhance my
-            skills and to gain practical exposure in the industry. I
-            am highly motivated, eager to learn and ready to take on
-            new challenges.
+            Highly motivated software developer with a keen interest
+            in data structures and algorithms with a primary focus
+            on learning back-end development. Proficient in Java,
+            JavaScript and SQL. Some experience with front-end
+            technologies (HTML, CSS, React) and currently learning
+            Rust.
+            <br />
+            <br />
+            Seeking internship opportunities to gain expertise,
+            practical industry exposure, and to contribute to
+            organizational success. Eager to learn, motivated, and
+            prepared to tackle new challenges head-on.
+
         `;
 
         //Personal info
         document.querySelector("#titlePersonal").textContent =
-            "Personal Information";
+            "Personal information";
         document.querySelector("#infoName").textContent = " 💳 Full name:";
         document.querySelector("#infoBirth").textContent = "🎂 Date of Birth:";
         document.querySelector("#infoAddress").textContent = "📫 Address:";
@@ -58,7 +60,7 @@ function langSwitch(english) {
 
         //Skills
         document.querySelector("#titleSkills").textContent =
-            "Professional Skills";
+            "Professional skills";
         //TODO:
 
         //Education
@@ -87,15 +89,16 @@ function langSwitch(english) {
 
         document.querySelector("#titleAbout").textContent = "Sobre mí";
         document.querySelector("#aboutMe").innerHTML = `
-            Soy un desarrollador de software apasionado por las estructuras
-            de datos y los algoritmos. Tengo experiencia en el desarrollo de 
-            aplicaciones con Java, JavaScript, MySQL y MariaDB; actualmente
-            estoy aprendiendo Rust. También tengo experiencia con HTML, CSS y algo de
-            React, pero mi interés principal es en back-end.
-            <br /> <br />
-            Estoy buscando oportunidades de prácticas para mejorar mis habilidades y 
-            adquirir experiencia práctica en la industria. Estoy motivado, 
-            dispuesto a aprender y listo para enfrentar nuevos desafíos.
+            Soy un desarrollador de software altamente motivado, con especial
+            interés en las estructuras de datos y los algoritmos. Mi interés principal
+            es el desarrollo backend. Habilidad en Java, JavaScript, SQL  y algo de
+            experiencia con tecnologías frontend (HTML, CSS, React). Actualmente estoy 
+            aprendiendo Rust
+            <br/> <br/>
+            Estoy buscando oportunidades de trabajo para adquirir experiencia 
+            real en la industria y contribuir al éxito de la organización. 
+            Estoy ansioso por aprender, motivado y preparado para enfrentar 
+            nuevos desafíos con determinación.
             `;
 
         //Personal info
