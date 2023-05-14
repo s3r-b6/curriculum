@@ -61,7 +61,12 @@ function langSwitch(english) {
         //Skills
         document.querySelector("#titleSkills").textContent =
             "Professional skills";
-        //TODO:
+        document.querySelector("#skillsProgramming").textContent =
+            "Programming Languages";
+        document.querySelector("#skillsTools").textContent = "Tools";
+        document.querySelector("#skillsSystems").textContent = "Systems";
+        document.querySelector("#skillsOther").textContent = "Other";
+        document.querySelector("#skillsEditors").textContent = "Editors";
 
         //Education
         document.querySelector("#titleEducation").textContent = "Education";
@@ -81,7 +86,34 @@ function langSwitch(english) {
 
         //Interests
         document.querySelector("#titleInterests").textContent = "More about me";
-
+        document.querySelector(".interests.content").innerHTML = `
+                    <h3 class="interest title">Gaming and computers:</h3>
+                    <p>
+                        Cultivated a deep passion for technology through gaming
+                        experiences. Constantly tweaking and modifying settings
+                        on my systems. Knowledgeable in PC hardware, regularly
+                        keeping up with industry trends through YouTube videos
+                        and actively investing in component upgrades.
+                    </p>
+                    <h3 class="interest title">Development</h3>
+                    <p>
+                        Enthusiastic about coding, engaging in coding challenges
+                        (e.g., Codewars, Advent of Code) and actively following
+                        coding-related videos and streams. Currently expanding
+                        skills through Rust programming language, exploring game
+                        development with Bevy, REST API creation with Rocket,
+                        and utilizing Tokio.
+                    </p>
+                    <h3 class="interest title">Music:</h3>
+                    <p>
+                        Studied electric guitar for 11 years, specializing in
+                        jazz and progressive rock/metal. Developed discipline
+                        and hard work ethic through music a lot of practice.
+                        Strengthened English skills by watching online classes
+                        and clinics conducted by accomplished guitarists.
+                    </p>
+                
+`;
         main.classList.toggle("eng");
     } else if (!english && main.classList.contains("eng")) {
         //Spanish version
@@ -113,7 +145,12 @@ function langSwitch(english) {
         //Skills
         document.querySelector("#titleSkills").textContent =
             "Habilidades profesionales";
-        //TODO:
+        document.querySelector("#skillsProgramming").textContent =
+            "Lenguajes de programación";
+        document.querySelector("#skillsTools").textContent = "Herramientas";
+        document.querySelector("#skillsSystems").textContent = "Sistemas";
+        document.querySelector("#skillsOther").textContent = "Otros";
+        document.querySelector("#skillsEditors").textContent = "Editores";
 
         //Education
         document.querySelector("#titleEducation").textContent = "Estudios";
@@ -132,8 +169,35 @@ function langSwitch(english) {
 
         //Interests
         document.querySelector("#titleInterests").textContent = "Más sobre mí";
-        //TODO:
+        document.querySelector(".interests.content").innerHTML = `
+            <h3 class="interest title">Juegos y computadoras:</h3>
+            <p>
+                He cultivado una profunda pasión por la tecnología a través de mis 
+                experiencias en los videojuegos. Siempre estoy ajustando y modificando 
+                la configuración de mis sistemas. Tengo conocimientos en hardware de PC
+                y me mantengo al tanto de las últimas tendencias de la industria a través 
+                de videos en YouTube. Además, invierto activamente en mejorar los 
+                componentes de mi equipo.
+            </p>
+            <h3 class="interest title">Desarrollo:</h3>
+            <p>
+                Me entusiasma la programación y participo en desafíos de codificación como Codewars
+                y Advent of Code. También sigo videos y transmisiones relacionadas con la programación. 
+                Actualmente estoy ampliando mis habilidades con el lenguaje de programación Rust, 
+                explorando el desarrollo de juegos con Bevy, la creación de API REST con Rocket y 
+                utilizando Tokio.
+            </p>
+            <h3 class="interest title">Música:</h3>
+            <p>
+                Estudié guitarra eléctrica durante 11 años, especializándome en jazz, rock y metal progresivo.
+                A través de la música, he desarrollado disciplina y una ética de trabajo sólida gracias a 
+                muchas horas de práctica. También he mejorado mis habilidades en inglés al ver clases y 
+                clínicas en línea impartidas por destacados guitarristas.
+            </p>
+        `;
 
+        document.querySelector("#githubLink").textContent =
+            "Ver contenido de la página";
         main.classList.toggle("eng");
     } else {
         return;

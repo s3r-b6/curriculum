@@ -14,8 +14,7 @@
     </head>
 
     <body>
-        <!--TODO: make spanish default-->
-        <main class="eng">
+        <main class="">
             <div class="top1">
                 <!--Placeholder-->
                 <div class="left">
@@ -23,8 +22,8 @@
                 </div>
                 <div class="right">
                     <div class="lang buttons">
-                        <button class="lang esp">ESP</button>
-                        <button class="lang eng active">ENG</button>
+                        <button class="lang esp active">ESP</button>
+                        <button class="lang eng">ENG</button>
                     </div>
                     <h2 class="name">Sergio Bermejo</h2>
                     <h4>Software Developer</h4>
@@ -77,30 +76,31 @@
             <!-- Personal Information Section -->
             <div class="top2">
                 <div class="left">
-                    <h2 id="titleAbout" class="title">About me</h2>
+                    <h2 id="titleAbout" class="title">Sobre mí</h2>
                     <p id="aboutMe">
-                        Highly motivated software developer with a keen interest
-                        in data structures and algorithms with a primary focus
-                        on learning back-end development. Proficient in Java,
-                        JavaScript and SQL. Some experience with front-end
-                        technologies (HTML, CSS, React) and currently learning
-                        Rust.
+                        Soy un desarrollador de software altamente motivado, con
+                        especial interés en las estructuras de datos y los
+                        algoritmos. Mi interés principal es el desarrollo
+                        backend. Habilidad en Java, JavaScript, SQL y algo de
+                        experiencia con tecnologías frontend (HTML, CSS, React).
+                        Actualmente estoy aprendiendo Rust
                         <br />
                         <br />
-                        Seeking internship opportunities to gain expertise,
-                        practical industry exposure, and to contribute to
-                        organizational success. Eager to learn, motivated, and
-                        prepared to tackle new challenges head-on.
+                        Estoy buscando oportunidades de trabajo para adquirir
+                        experiencia real en la industria y contribuir al éxito
+                        de la organización. Estoy ansioso por aprender, motivado
+                        y preparado para enfrentar nuevos desafíos con
+                        determinación.
                     </p>
                 </div>
                 <div class="right">
                     <h2 id="titlePersonal" class="title">
-                        Personal information
+                        Información personal
                     </h2>
                     <div class="content">
                         <div class="info">
                             <span class="info title" id="infoName"
-                                >💳 Full Name:</span
+                                >💳 Nombre completo:</span
                             >
                             <br />
                             <span class="info details"
@@ -109,14 +109,14 @@
                         </div>
                         <div class="info">
                             <span id="infoBirth" class="info title"
-                                >🎂 Date of Birth:</span
+                                >🎂 Fecha de nacimiento:</span
                             >
                             <br />
                             <span class="info details">28/11/2000</span>
                         </div>
                         <div class="info">
                             <span id="infoAddress" class="info title"
-                                >📫 Address:</span
+                                >📫 Dirección:</span
                             >
                             <br />
                             <span class="info details"
@@ -135,7 +135,7 @@
                         </div>
                         <div class="info">
                             <span id="infoPhone" class="info title"
-                                >📞 Phone:</span
+                                >📞 Teléfono:</span
                             >
                             <br />
                             <span class="info details">+34 684 01 13 35</span>
@@ -146,21 +146,27 @@
 
             <!-- Skills Section -->
             <div class="mid">
-                <h2 id="titleSkills" class="title">Professional skills</h2>
+                <h2 id="titleSkills" class="title">
+                    Habilidades profesionales
+                </h2>
                 <div class="skills content">
                     <ul>
                         <div class="skills row1">
                             <li class="skills item">
-                                <h2>Programming languages</h2>
+                                <h2 id="skillsProgramming">
+                                    Lenguajes de programación
+                                </h2>
                                 <ul class="skills list">
                                     <li>Java</li>
-                                    <li>Currently learning Rust</li>
-                                    <li>JavaScript & TypeScript</li>
+                                    <li id="learningRust">
+                                        Currently learning Rust
+                                    </li>
+                                    <li>JavaScript &amp; TypeScript</li>
                                     <li>PL/SQL</li>
                                 </ul>
                             </li>
                             <li class="skills item">
-                                <h2>Frameworks</h2>
+                                <h2 id="skillsFrameworks">Frameworks</h2>
                                 <ul class="skills list">
                                     <li>Spring Boot</li>
                                     <li>React</li>
@@ -169,21 +175,21 @@
                             </li>
                         </div>
                         <li class="skills item">
-                            <h2>Tools</h2>
+                            <h2 id="skillsTools">Herramientas</h2>
                             <ul class="skills row2">
                                 <div>
-                                    <h2>Systems</h2>
+                                    <h2 id="skillsSystems">Sistemas</h2>
                                     <li>Linux</li>
                                     <li>Windows</li>
                                 </div>
                                 <div>
-                                    <h2>Other</h2>
+                                    <h2 id="skillsOther">Otros</h2>
                                     <li>Git</li>
                                     <li>Maven</li>
                                     <li>Node</li>
                                 </div>
                                 <div>
-                                    <h2>Editors</h2>
+                                    <h2 id="skillsEditors">Editores</h2>
                                     <li>Neovim</li>
                                     <li>IntelliJ</li>
                                     <li>VS Code</li>
@@ -196,21 +202,20 @@
 
             <!-- Education Section -->
             <div class="bottom">
-                <h2 id="titleEducation" class="title">Education</h2>
+                <h2 id="titleEducation" class="title">Estudios</h2>
                 <div class="education content">
                     <div class="education item">
                         <div class="info">
-                            <span class="info title degree">Degree:</span>
+                            <span class="info title degree">Grado:</span>
                             <br />
-                            <span id="degree1" class="info details">
-                                Professional Training in Software Development
-                                <br />
-                                Desarrollo de Aplicaciones Multiplataforma (DAM)
-                            </span>
+                            <span id="degree1" class="info details"
+                                >Grado superior en Desarrollo de Aplicaciones
+                                Multiplataforma (DAM)</span
+                            >
                         </div>
                         <div class="info">
                             <span class="info title institution"
-                                >Institution:</span
+                                >Institución:</span
                             >
                             <br />
                             <span class="info details"
@@ -218,7 +223,7 @@
                             >
                         </div>
                         <div class="info">
-                            <span class="info title date">Date:</span>
+                            <span class="info title date">Fecha:</span>
                             <span class="info details">2022-2023</span>
                         </div>
                         <br />
@@ -226,15 +231,15 @@
                     <div class="education item">
                         <br />
                         <div class="info">
-                            <span class="info title degree">Degree:</span>
+                            <span class="info title degree">Grado:</span>
                             <br />
-                            <span id="degree2" class="info details">
-                                Degree in Musicology
-                            </span>
+                            <span id="degree2" class="info details"
+                                >Grado en Musicología</span
+                            >
                         </div>
                         <div class="info">
                             <span class="info title institution"
-                                >Institution:</span
+                                >Institución:</span
                             >
                             <br />
                             <span class="info details"
@@ -242,46 +247,52 @@
                             >
                         </div>
                         <div class="info">
-                            <span class="info title date">Date:</span>
+                            <span class="info title date">Fecha:</span>
                             <span class="info details">2018-2021</span>
                         </div>
                     </div>
                 </div>
                 <!-- Interests Section -->
                 <h2 id="titleInterests" class="interests title">
-                    More about me
+                    Más sobre mí
                 </h2>
                 <div class="interests content inactive">
-                    <h3 class="interest title">Gaming and computers:</h3>
+                    <h3 class="interest title">Juegos y computadoras:</h3>
                     <p>
-                        Cultivated a deep passion for technology through gaming
-                        experiences. Constantly tweaking and modifying settings
-                        on my systems. Knowledgeable in PC hardware, regularly
-                        keeping up with industry trends through YouTube videos
-                        and actively investing in component upgrades.
+                        He cultivado una profunda pasión por la tecnología a
+                        través de mis experiencias en los videojuegos. Siempre
+                        estoy ajustando y modificando la configuración de mis
+                        sistemas. Tengo conocimientos en hardware de PC y me
+                        mantengo al tanto de las últimas tendencias de la
+                        industria a través de videos en YouTube. Además,
+                        invierto activamente en mejorar los componentes de mi
+                        equipo.
                     </p>
-                    <h3 class="interest title">Development</h3>
+                    <h3 class="interest title">Desarrollo:</h3>
                     <p>
-                        Enthusiastic about coding, engaging in coding challenges
-                        (e.g., Codewars, Advent of Code) and actively following
-                        coding-related videos and streams. Currently expanding
-                        skills through Rust programming language, exploring game
-                        development with Bevy, REST API creation with Rocket,
-                        and utilizing Tokio.
+                        Me entusiasma la programación y participo en desafíos de
+                        codificación como Codewars y Advent of Code. También
+                        sigo videos y transmisiones relacionadas con la
+                        programación. Actualmente estoy ampliando mis
+                        habilidades con el lenguaje de programación Rust,
+                        explorando el desarrollo de juegos con Bevy, la creación
+                        de API REST con Rocket y utilizando Tokio.
                     </p>
-                    <h3 class="interest title">Music:</h3>
+                    <h3 class="interest title">Música:</h3>
                     <p>
-                        Studied electric guitar for 11 years, specializing in
-                        jazz and progressive rock/metal. Developed discipline
-                        and hard work ethic through music a lot of practice.
-                        Strengthened English skills by watching online classes
-                        and clinics conducted by accomplished guitarists.
+                        Estudié guitarra eléctrica durante 11 años,
+                        especializándome en jazz, rock y metal progresivo. A
+                        través de la música, he desarrollado disciplina y una
+                        ética de trabajo sólida gracias a muchas horas de
+                        práctica. También he mejorado mis habilidades en inglés
+                        al ver clases y clínicas en línea impartidas por
+                        destacados guitarristas.
                     </p>
                 </div>
             </div>
         </main>
         <footer>
-            <a href="https://github.com/s3r-b6/curriculum">
+            <a id="githubLink" href="https://github.com/s3r-b6/curriculum">
                 See code of the page
             </a>
         </footer>
