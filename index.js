@@ -47,13 +47,16 @@ function langSwitch(english) {
             principal interés es el desarrollo backend. Familiaridad
             con Java, JavaScript y SQL; tengo experiencia con
             tecnologías frontend (HTML, CSS, React). Actualmente
-            estoy aprendiendo Rust.
+            aprendiendo Rust.
             <br />
             <br />
             Estoy buscando oportunidades de trabajo para adquirir
-            experiencia real en la industria e iniciar mi carrera
+            experiencia en la industria e iniciar mi carrera
             laboral. Tengo muchas ganas de aprender, estoy motivado
             y preparado para enfrentar nuevos desafíos.
+            <br />
+            <br />
+            Nivel alto de inglés. Nivel bajo de alemán.
             `;
 
         //Personal info
@@ -148,7 +151,10 @@ function langSwitch(english) {
             practical industry exposure, and to contribute to
             organizational success. Eager to learn, motivated, and
             prepared to tackle new challenges head-on.
-
+            <br />
+            <br />
+            My first language is spanish. High level of english and low level
+            of german.
         `;
 
         document.querySelector("#subtitle").textContent = "Software developer";
