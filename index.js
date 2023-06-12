@@ -4,6 +4,11 @@ window.onload = () => {
         .addEventListener("click", () => toggleInterests());
 
     document
+        .querySelector("button.pdf")
+        .addEventListener("click", () => alert("test"));
+    //TODO: Crear documento PDF
+
+    document
         .querySelector(".lang.esp")
         .addEventListener("click", () => langSwitch(false));
 
@@ -28,27 +33,125 @@ function langSwitch(english) {
         document.querySelector(".lang.esp").classList.toggle("active");
     }
 
-    if (english && !main.classList.contains("eng")) {
+    //TODO: Arreglar textos
+    if (!english && main.classList.contains("eng")) {
+        //Spanish version
+        switchButtonsState();
+
+        document.querySelector("#subtitle").textContent =
+            "Desarrollador de software";
+        document.querySelector("#titleAbout").textContent = "Sobre mí";
+        document.querySelector("#aboutMe").innerHTML = `
+            Soy un desarrollador de software motivado y con especial
+            interés en las estructuras de datos y los algoritmos. Mi
+            principal interés es el desarrollo backend. Familiaridad
+            con Java, JavaScript y SQL; tengo experiencia con
+            tecnologías frontend (HTML, CSS, React). Actualmente
+            estoy aprendiendo Rust.
+            <br />
+            <br />
+            Estoy buscando oportunidades de trabajo para adquirir
+            experiencia real en la industria e iniciar mi carrera
+            laboral. Tengo muchas ganas de aprender, estoy motivado
+            y preparado para enfrentar nuevos desafíos.
+            `;
+
+        //Personal info
+        document.querySelector("#titlePersonal").textContent =
+            "Información personal";
+        document.querySelector("#infoName").textContent = "💳 Nombre completo:";
+        document.querySelector("#infoBirth").textContent =
+            "🎂 Fecha de nacimiento:";
+        document.querySelector("#infoAddress").textContent = "📫 Dirección:";
+        document.querySelector("#infoPhone").textContent = "📞 Teléfono:";
+
+        //Skills
+        document.querySelector("#titleSkills").textContent =
+            "Habilidades profesionales";
+        document.querySelector("#skillsProgramming").textContent =
+            "Lenguajes de programación";
+        document.querySelector("#learningRust").textContent =
+            "Aprendiendo Rust";
+        document.querySelector("#skillsSystems").textContent = "Sistemas";
+        document.querySelector("#skillsOther").textContent = "Otros";
+        document.querySelector("#skillsEditors").textContent = "Editores";
+        document.querySelector("#skillsOffice").textContent = "Ofimática";
+
+        //Education
+        document.querySelector("#titleEducation").textContent = "Estudios";
+        document
+            .querySelectorAll(".info.title.degree")
+            .forEach((e) => (e.textContent = "Grado:"));
+        document.querySelector("#degree1").textContent =
+            "Grado superior en Desarrollo de Aplicaciones Multiplataforma (DAM)";
+        document.querySelector("#degree2").textContent = "Grado en Musicología";
+        document
+            .querySelectorAll(".info.title.institution")
+            .forEach((e) => (e.textContent = "Institución:"));
+        document
+            .querySelectorAll(".info.title.date")
+            .forEach((e) => (e.textContent = "Fecha:"));
+
+        //Interests
+        document.querySelector("#titleInterests").textContent = "Más sobre mí";
+        document.querySelector(".interests.content").innerHTML = `
+            <h3 class="interest title">Juegos y ordenadores:</h3>
+            <p>
+                A través de mi experiencia con los videojuegos he cultivado
+                una gran pasión por la tecnología. Disfruto configurando y
+                modificando mi hardware e intento mantenerme al día de las
+                últimas novedades. He utilizado mucho ordenadores, tanto por
+                ocio como por estudios, por lo que me siento muy cómodo
+                delante de uno.
+            </p>
+            <h3 class="interest title">Desarrollo:</h3>
+            <p>
+                Me gusta programar. Sigo vídeos y streams relacionados con
+                la programación, y a menudo trato de resolver katas de
+                programación (Advent of Code, Codewars). Ahora estoy
+                aprendiendo algo de Rust y sigo profundizando en Java.
+                Recientemente he comenzado un nuevo proyecto personal que
+                consiste en escribir un pequeño lenguaje interpretado en
+                Java (el código está disponible en mi GitHub) para entender
+                cómo funcionan esta clase de lenguajes.
+            </p>
+            <h3 class="interest title">Música:</h3>
+            <p>
+                He estudiado guitarra (eléctrica, principalmente) durante 11
+                años. Mis géneros de música favoritos son el jazz y el metal
+                progresivo. A través de la música he trabajado mucho mi
+                disciplina y mi concentración y he mejorado mucho mis
+                habilidades en inglés a través de clases impartidas por
+                destacados guitarristas.
+            </p>
+        `;
+
+        document.querySelector("#githubLink").textContent =
+            "Ver código del documento";
+        main.classList.toggle("eng");
+    } else if (english && !main.classList.contains("eng")) {
         //English version
         switchButtonsState();
 
         //About me
         document.querySelector("#titleAbout").textContent = "About me";
         document.querySelector("#aboutMe").innerHTML = `
-            Highly motivated software developer with a keen interest
+            I'm a highly motivated software developer with a keen interest
             in data structures and algorithms with a primary focus
-            on learning back-end development. Proficient in Java,
-            JavaScript and SQL. Some experience with front-end
-            technologies (HTML, CSS, React) and currently learning
+            on learning back-end development. I am familiar with Java,
+            JavaScript and SQL; I have some experience with front-end
+            technologies (HTML, CSS, React) and currently I am learning
             Rust.
             <br />
             <br />
-            Seeking internship opportunities to gain expertise,
+            Currently seeking internship opportunities to gain expertise,
             practical industry exposure, and to contribute to
             organizational success. Eager to learn, motivated, and
             prepared to tackle new challenges head-on.
 
         `;
+
+        document.querySelector("#subtitle").textContent = "Software developer";
 
         //Personal info
         document.querySelector("#titlePersonal").textContent =
@@ -63,10 +166,11 @@ function langSwitch(english) {
             "Professional skills";
         document.querySelector("#skillsProgramming").textContent =
             "Programming Languages";
-        document.querySelector("#skillsTools").textContent = "Tools";
+        document.querySelector("#learningRust").textContent = "Learning Rust";
         document.querySelector("#skillsSystems").textContent = "Systems";
         document.querySelector("#skillsOther").textContent = "Other";
         document.querySelector("#skillsEditors").textContent = "Editors";
+        document.querySelector("#skillsOffice").textContent = "Office Software";
 
         //Education
         document.querySelector("#titleEducation").textContent = "Education";
@@ -89,115 +193,32 @@ function langSwitch(english) {
         document.querySelector(".interests.content").innerHTML = `
                     <h3 class="interest title">Gaming and computers:</h3>
                     <p>
-                        Cultivated a deep passion for technology through gaming
+                        I cultivated a deep passion for technology through my gaming
                         experiences. Constantly tweaking and modifying settings
                         on my systems. Knowledgeable in PC hardware, regularly
-                        keeping up with industry trends through YouTube videos
-                        and actively investing in component upgrades.
+                        keeping up with industry trends through videos and streams
+                        and I spend a lot of time in front of my computer.
                     </p>
                     <h3 class="interest title">Development</h3>
                     <p>
-                        Enthusiastic about coding, engaging in coding challenges
-                        (e.g., Codewars, Advent of Code) and actively following
-                        coding-related videos and streams. Currently expanding
-                        skills through Rust programming language, exploring game
-                        development with Bevy, REST API creation with Rocket,
-                        and utilizing Tokio.
+                        Enthusiastic about coding I try to engage in coding challenges
+                        (e.g., Codewars, Advent of Code) frequently; and actively 
+                        following coding-related videos and streams. I am currently learning
+                        Rust and still studying Java. My last personal project consists of
+                        writing a small interpreted language, to learn about this kind of 
+                        language (code is available on my GitHub).
                     </p>
                     <h3 class="interest title">Music:</h3>
                     <p>
-                        Studied electric guitar for 11 years, specializing in
+                        I studied electric guitar for 11 years, specializing in
                         jazz and progressive rock/metal. Developed discipline
-                        and hard work ethic through music a lot of practice.
-                        Strengthened English skills by watching online classes
+                        and a hard work ethic through a lot of practice.
+                        Learnt most of my English by watching online classes
                         and clinics conducted by accomplished guitarists.
                     </p>
-                
 `;
-        main.classList.toggle("eng");
-    } else if (!english && main.classList.contains("eng")) {
-        //Spanish version
-        switchButtonsState();
-
-        document.querySelector("#titleAbout").textContent = "Sobre mí";
-        document.querySelector("#aboutMe").innerHTML = `
-            Soy un desarrollador de software altamente motivado, con especial
-            interés en las estructuras de datos y los algoritmos. Mi interés principal
-            es el desarrollo backend. Habilidad en Java, JavaScript, SQL  y algo de
-            experiencia con tecnologías frontend (HTML, CSS, React). Actualmente estoy 
-            aprendiendo Rust
-            <br/> <br/>
-            Estoy buscando oportunidades de trabajo para adquirir experiencia 
-            real en la industria y contribuir al éxito de la organización. 
-            Estoy ansioso por aprender, motivado y preparado para enfrentar 
-            nuevos desafíos con determinación.
-            `;
-
-        //Personal info
-        document.querySelector("#titlePersonal").textContent =
-            "Información personal";
-        document.querySelector("#infoName").textContent = "💳 Nombre completo:";
-        document.querySelector("#infoBirth").textContent =
-            "🎂 Fecha de nacimiento:";
-        document.querySelector("#infoAddress").textContent = "📫 Dirección:";
-        document.querySelector("#infoPhone").textContent = "📞 Teléfono:";
-
-        //Skills
-        document.querySelector("#titleSkills").textContent =
-            "Habilidades profesionales";
-        document.querySelector("#skillsProgramming").textContent =
-            "Lenguajes de programación";
-        document.querySelector("#skillsTools").textContent = "Herramientas";
-        document.querySelector("#skillsSystems").textContent = "Sistemas";
-        document.querySelector("#skillsOther").textContent = "Otros";
-        document.querySelector("#skillsEditors").textContent = "Editores";
-
-        //Education
-        document.querySelector("#titleEducation").textContent = "Estudios";
-        document
-            .querySelectorAll(".info.title.degree")
-            .forEach((e) => (e.textContent = "Grado:"));
-        document.querySelector("#degree1").textContent =
-            "Grado superior en Desarrollo de Aplicaciones Multiplataforma (DAM)";
-        document.querySelector("#degree2").textContent = "Grado en Musicología";
-        document
-            .querySelectorAll(".info.title.institution")
-            .forEach((e) => (e.textContent = "Institución:"));
-        document
-            .querySelectorAll(".info.title.date")
-            .forEach((e) => (e.textContent = "Fecha:"));
-
-        //Interests
-        document.querySelector("#titleInterests").textContent = "Más sobre mí";
-        document.querySelector(".interests.content").innerHTML = `
-            <h3 class="interest title">Juegos y computadoras:</h3>
-            <p>
-                He cultivado una profunda pasión por la tecnología a través de mis 
-                experiencias en los videojuegos. Siempre estoy ajustando y modificando 
-                la configuración de mis sistemas. Tengo conocimientos en hardware de PC
-                y me mantengo al tanto de las últimas tendencias de la industria a través 
-                de videos en YouTube. Además, invierto activamente en mejorar los 
-                componentes de mi equipo.
-            </p>
-            <h3 class="interest title">Desarrollo:</h3>
-            <p>
-                Me entusiasma la programación y participo en desafíos de codificación como Codewars
-                y Advent of Code. También sigo videos y transmisiones relacionadas con la programación. 
-                Actualmente estoy ampliando mis habilidades con el lenguaje de programación Rust, 
-                explorando el desarrollo de juegos con Bevy, la creación de API REST con Rocket y 
-                utilizando Tokio.
-            </p>
-            <h3 class="interest title">Música:</h3>
-            <p>
-                Estudié guitarra eléctrica durante 11 años, especializándome en jazz, rock y metal progresivo.
-                A través de la música, he desarrollado disciplina y una ética de trabajo sólida gracias a 
-                muchas horas de práctica. También he mejorado mis habilidades en inglés al ver clases y 
-                clínicas en línea impartidas por destacados guitarristas.
-            </p>
-        `;
-
         document.querySelector("#githubLink").textContent =
-            "Ver contenido de la página";
+            "See code of the document";
         main.classList.toggle("eng");
     } else {
         return;

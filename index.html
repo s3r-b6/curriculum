@@ -14,9 +14,9 @@
     </head>
 
     <body>
-        <main class="">
+        <main id="main">
             <div class="top1">
-                <!--Placeholder-->
+                <!--TODO: Place photo-->
                 <div class="left">
                     <img class="portrait" src="./img/no-image.jpg" />
                 </div>
@@ -26,7 +26,7 @@
                         <button class="lang eng">ENG</button>
                     </div>
                     <h2 class="name">Sergio Bermejo</h2>
-                    <h4>Software Developer</h4>
+                    <h4 id="subtitle">Desarrollador de software</h4>
                     <ul class="icons">
                         <li class="icon item">
                             <a
@@ -71,6 +71,7 @@
                             </a>
                         </li>
                     </ul>
+                    <button class="pdf">PDF</button>
                 </div>
             </div>
             <!-- Personal Information Section -->
@@ -78,19 +79,18 @@
                 <div class="left">
                     <h2 id="titleAbout" class="title">Sobre mí</h2>
                     <p id="aboutMe">
-                        Soy un desarrollador de software altamente motivado, con
-                        especial interés en las estructuras de datos y los
-                        algoritmos. Mi interés principal es el desarrollo
-                        backend. Habilidad en Java, JavaScript, SQL y algo de
-                        experiencia con tecnologías frontend (HTML, CSS, React).
-                        Actualmente estoy aprendiendo Rust
+                        Soy un desarrollador de software motivado y con especial
+                        interés en las estructuras de datos y los algoritmos. Mi
+                        principal interés es el desarrollo backend. Familiaridad
+                        con Java, JavaScript y SQL; tengo experiencia con
+                        tecnologías frontend (HTML, CSS, React). Actualmente
+                        estoy aprendiendo Rust.
                         <br />
                         <br />
                         Estoy buscando oportunidades de trabajo para adquirir
-                        experiencia real en la industria y contribuir al éxito
-                        de la organización. Estoy ansioso por aprender, motivado
-                        y preparado para enfrentar nuevos desafíos con
-                        determinación.
+                        experiencia real en la industria e iniciar mi carrera
+                        laboral. Tengo muchas ganas de aprender, estoy motivado
+                        y preparado para enfrentar nuevos desafíos.
                     </p>
                 </div>
                 <div class="right">
@@ -150,53 +150,53 @@
                     Habilidades profesionales
                 </h2>
                 <div class="skills content">
-                    <ul>
-                        <div class="skills row1">
-                            <li class="skills item">
-                                <h2 id="skillsProgramming">
-                                    Lenguajes de programación
-                                </h2>
-                                <ul class="skills list">
-                                    <li>Java</li>
-                                    <li id="learningRust">
-                                        Currently learning Rust
-                                    </li>
-                                    <li>JavaScript &amp; TypeScript</li>
-                                    <li>PL/SQL</li>
-                                </ul>
-                            </li>
-                            <li class="skills item">
-                                <h2 id="skillsFrameworks">Frameworks</h2>
-                                <ul class="skills list">
-                                    <li>Spring Boot</li>
-                                    <li>React</li>
-                                    <li>JUnit</li>
-                                </ul>
-                            </li>
-                        </div>
-                        <li class="skills item">
-                            <h2 id="skillsTools">Herramientas</h2>
-                            <ul class="skills row2">
-                                <div>
-                                    <h2 id="skillsSystems">Sistemas</h2>
-                                    <li>Linux</li>
-                                    <li>Windows</li>
-                                </div>
-                                <div>
-                                    <h2 id="skillsOther">Otros</h2>
-                                    <li>Git</li>
-                                    <li>Maven</li>
-                                    <li>Node</li>
-                                </div>
-                                <div>
-                                    <h2 id="skillsEditors">Editores</h2>
-                                    <li>Neovim</li>
-                                    <li>IntelliJ</li>
-                                    <li>VS Code</li>
-                                </div>
-                            </ul>
-                        </li>
-                    </ul>
+                    <div class="skills item">
+                        <h2 id="skillsProgramming">Lenguajes</h2>
+                        <ul class="skills list">
+                            <li>Java</li>
+                            <li>PL/SQL</li>
+                            <li id="learningRust">Aprendiendo Rust</li>
+                            <li>JavaScript/TypeScript</li>
+                        </ul>
+                    </div>
+                    <div class="skills item">
+                        <h2 id="skillsFrameworks">Frameworks</h2>
+                        <ul class="skills list">
+                            <li>JUnit</li>
+                            <li>React</li>
+                            <li>Spring Boot</li>
+                        </ul>
+                    </div>
+                    <div class="skills item">
+                        <h2 id="skillsOther">Otros</h2>
+                        <ul>
+                            <li>Git</li>
+                            <li>Maven</li>
+                            <li>Node</li>
+                        </ul>
+                    </div>
+                    <div class="skills item">
+                        <h2 id="skillsSystems">Sistemas</h2>
+                        <ul>
+                            <li>Linux</li>
+                            <li>Windows</li>
+                        </ul>
+                    </div>
+                    <div class="skills item">
+                        <h2 id="skillsEditors">Editores</h2>
+                        <ul>
+                            <li>IntelliJ</li>
+                            <li>Neovim</li>
+                        </ul>
+                    </div>
+                    <div class="skills item">
+                        <h2 id="skillsOffice">Ofimática</h2>
+                        <ul>
+                            <li id="skillWpm">~110wpm</li>
+                            <li>Office Suite</li>
+                            <li>Photoshop</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -252,48 +252,46 @@
                         </div>
                     </div>
                 </div>
-                <!-- Interests Section -->
-                <h2 id="titleInterests" class="interests title">
-                    Más sobre mí
-                </h2>
-                <div class="interests content inactive">
-                    <h3 class="interest title">Juegos y computadoras:</h3>
-                    <p>
-                        He cultivado una profunda pasión por la tecnología a
-                        través de mis experiencias en los videojuegos. Siempre
-                        estoy ajustando y modificando la configuración de mis
-                        sistemas. Tengo conocimientos en hardware de PC y me
-                        mantengo al tanto de las últimas tendencias de la
-                        industria a través de videos en YouTube. Además,
-                        invierto activamente en mejorar los componentes de mi
-                        equipo.
-                    </p>
-                    <h3 class="interest title">Desarrollo:</h3>
-                    <p>
-                        Me entusiasma la programación y participo en desafíos de
-                        codificación como Codewars y Advent of Code. También
-                        sigo videos y transmisiones relacionadas con la
-                        programación. Actualmente estoy ampliando mis
-                        habilidades con el lenguaje de programación Rust,
-                        explorando el desarrollo de juegos con Bevy, la creación
-                        de API REST con Rocket y utilizando Tokio.
-                    </p>
-                    <h3 class="interest title">Música:</h3>
-                    <p>
-                        Estudié guitarra eléctrica durante 11 años,
-                        especializándome en jazz, rock y metal progresivo. A
-                        través de la música, he desarrollado disciplina y una
-                        ética de trabajo sólida gracias a muchas horas de
-                        práctica. También he mejorado mis habilidades en inglés
-                        al ver clases y clínicas en línea impartidas por
-                        destacados guitarristas.
-                    </p>
-                </div>
+            </div>
+            <!-- Interests Section -->
+            <button id="titleInterests" class="interests title">
+                Más sobre mí
+            </button>
+            <div class="interests content inactive">
+                <h3 class="interest title">Juegos y ordenadores:</h3>
+                <p>
+                    A través de mi experiencia con los videojuegos he cultivado
+                    una gran pasión por la tecnología. Disfruto configurando y
+                    modificando mi hardware e intento mantenerme al día de las
+                    últimas novedades. He utilizado mucho ordenadores, tanto por
+                    ocio como por estudios, por lo que me siento muy cómodo
+                    delante de uno.
+                </p>
+                <h3 class="interest title">Desarrollo:</h3>
+                <p>
+                    Me gusta programar. Sigo vídeos y streams relacionados con
+                    la programación, y a menudo trato de resolver katas de
+                    programación (Advent of Code, Codewars). Ahora estoy
+                    aprendiendo algo de Rust y sigo profundizando en Java.
+                    Recientemente he comenzado un nuevo proyecto personal que
+                    consiste en escribir un pequeño lenguaje interpretado en
+                    Java (el código está disponible en mi GitHub) para entender
+                    cómo funcionan esta clase de lenguajes.
+                </p>
+                <h3 class="interest title">Música:</h3>
+                <p>
+                    He estudiado guitarra (eléctrica, principalmente) durante 11
+                    años. Mis géneros de música favoritos son el jazz y el metal
+                    progresivo. A través de la música he trabajado mucho mi
+                    disciplina y mi concentración y he mejorado mucho mis
+                    habilidades en inglés a través de clases impartidas por
+                    destacados guitarristas.
+                </p>
             </div>
         </main>
         <footer>
             <a id="githubLink" href="https://github.com/s3r-b6/curriculum">
-                See code of the page
+                Ver código del documento
             </a>
         </footer>
     </body>
