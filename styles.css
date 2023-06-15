@@ -261,6 +261,10 @@ footer {
     justify-content: space-around;
 }
 
+.hidden {
+    display: none;
+}
+
 @media (max-width: 944px) {
     .top1,
     .top2 {
@@ -290,5 +294,11 @@ footer {
         display: grid;
         grid-template-columns: fit-content(45%) fit-content(45%);
         justify-content: space-around;
+    }
+
+    #titlePersonal,
+    #titleAbout {
+        max-width: 1025px;
+        width: 92%;
     }
 }

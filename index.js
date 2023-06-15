@@ -3,10 +3,9 @@ window.onload = () => {
         .querySelector(".interests.title")
         .addEventListener("click", () => toggleInterests());
 
-    document
-        .querySelector("button.pdf")
-        .addEventListener("click", () => alert("test"));
-    //TODO: Crear documento PDF
+    document.querySelector("button.pdf").addEventListener("click", () => {
+        document.getElementById("download").click();
+    });
 
     document
         .querySelector(".lang.esp")
@@ -33,7 +32,6 @@ function langSwitch(english) {
         document.querySelector(".lang.esp").classList.toggle("active");
     }
 
-    //TODO: Arreglar textos
     if (!english && main.classList.contains("eng")) {
         //Spanish version
         switchButtonsState();
@@ -41,6 +39,8 @@ function langSwitch(english) {
         document.querySelector("#subtitle").textContent =
             "Desarrollador de software";
         document.querySelector("#titleAbout").textContent = "Sobre mí";
+
+        document.querySelector("button.pdf").classList.toggle("hidden");
         document.querySelector("#aboutMe").innerHTML = `
             Soy un desarrollador de software motivado y con especial
             interés en las estructuras de datos y los algoritmos. Mi
@@ -101,11 +101,10 @@ function langSwitch(english) {
             <h3 class="interest title">Juegos y ordenadores:</h3>
             <p>
                 A través de mi experiencia con los videojuegos he cultivado
-                una gran pasión por la tecnología. Disfruto configurando y
-                modificando mi hardware e intento mantenerme al día de las
-                últimas novedades. He utilizado mucho ordenadores, tanto por
-                ocio como por estudios, por lo que me siento muy cómodo
-                delante de uno.
+                una gran pasión por la tecnología. Me gusta el hardware e
+                intento mantenerme al día de las últimas novedades. He
+                utilizado mucho ordenadores, tanto por ocio como por
+                estudios, por lo que me siento muy cómodo delante de uno.
             </p>
             <h3 class="interest title">Desarrollo:</h3>
             <p>
@@ -138,6 +137,8 @@ function langSwitch(english) {
 
         //About me
         document.querySelector("#titleAbout").textContent = "About me";
+
+        document.querySelector("button.pdf").classList.toggle("hidden");
         document.querySelector("#aboutMe").innerHTML = `
             I'm a highly motivated software developer with a keen interest
             in data structures and algorithms with a primary focus
@@ -199,7 +200,7 @@ function langSwitch(english) {
         document.querySelector(".interests.content").innerHTML = `
                     <h3 class="interest title">Gaming and computers:</h3>
                     <p>
-                        I cultivated a deep passion for technology through my gaming
+                        I have cultivated a deep passion for technology through my gaming
                         experiences. Constantly tweaking and modifying settings
                         on my systems. Knowledgeable in PC hardware, regularly
                         keeping up with industry trends through videos and streams
