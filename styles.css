@@ -8,7 +8,7 @@ main {
     flex-direction: column;
     background-color: #fff;
     border-radius: 1rem;
-    max-width: 925px;
+    max-width: 1125px;
     margin: auto;
     border: solid #000;
 }

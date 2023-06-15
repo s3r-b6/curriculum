@@ -219,8 +219,8 @@ function langSwitch(english) {
                         I studied electric guitar for 11 years, specializing in
                         jazz and progressive rock/metal. Developed discipline
                         and a hard work ethic through a lot of practice.
-                        Learnt most of my English by watching online classes
-                        and clinics conducted by accomplished guitarists.
+                        Learnt a lot by watching online classes and clinics 
+                        conducted by accomplished international guitarists.
                     </p>
 `;
         document.querySelector("#githubLink").textContent =
