@@ -76,9 +76,11 @@ function langSwitch(english) {
         document.querySelector("#learningRust").textContent =
             "Aprendiendo Rust";
         document.querySelector("#skillsSystems").textContent = "Sistemas";
-        document.querySelector("#skillsOther").textContent = "Otros";
+        document.querySelector("#skillsOther").textContent =
+            "Otras herramientas";
         document.querySelector("#skillsEditors").textContent = "Editores";
         document.querySelector("#skillsOffice").textContent = "Ofimática";
+        document.querySelector("#skillWpm").textContent = "~110pps escribiendo";
 
         //Education
         document.querySelector("#titleEducation").textContent = "Estudios";
@@ -175,9 +177,10 @@ function langSwitch(english) {
             "Programming Languages";
         document.querySelector("#learningRust").textContent = "Learning Rust";
         document.querySelector("#skillsSystems").textContent = "Systems";
-        document.querySelector("#skillsOther").textContent = "Other";
+        document.querySelector("#skillsOther").textContent = "Other tools";
         document.querySelector("#skillsEditors").textContent = "Editors";
-        document.querySelector("#skillsOffice").textContent = "Office Software";
+        document.querySelector("#skillsOffice").textContent = "Office Skills";
+        document.querySelector("#skillWpm").textContent = "~110wpm writing";
 
         //Education
         document.querySelector("#titleEducation").textContent = "Education";
@@ -212,8 +215,8 @@ function langSwitch(english) {
                         (e.g., Codewars, Advent of Code) frequently; and actively 
                         following coding-related videos and streams. I am currently learning
                         Rust and still studying Java. My last personal project consists of
-                        writing a small interpreted language, to learn about this kind of 
-                        language (code is available on my GitHub).
+                        writing a small interpreted language, to learn more about this kind of 
+                        languages (code is available on my GitHub).
                     </p>
                     <h3 class="interest title">Music:</h3>
                     <p>
